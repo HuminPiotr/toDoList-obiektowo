@@ -2,7 +2,7 @@ class Start {
     constructor() {
         this.list = new List();
 
-        this.input = document.querySelector('input');
+        this.input = document.querySelector('section input');
 
         this.ul = document.querySelector('ul');
         this.taskNumber = document.querySelector('h2 span');
@@ -47,6 +47,7 @@ class Start {
             task.dataset.key = key;
             this.ul.appendChild(task);
         });
-        this.taskNumber.textContent = this.list.getTasksNumber();
+        // this.taskNumber.textContent = this.list.getTasksNumber();
+        this.taskNumber.textContent = listTask.length;
     }
 }

@@ -4,7 +4,7 @@ class List {
 
         this.getTasks = () => _tasks;
 
-        this.getTasksNumber = () => _tasks.length;
+        // this.getTasksNumber = () => _tasks.length;
 
         this.addTask = (content) => {
             const li = document.createElement('li');
