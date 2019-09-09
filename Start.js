@@ -9,6 +9,13 @@ class Start {
 
         document.querySelector('button').addEventListener('click', this.startDraw.bind(this));
         document.getElementById('filtr').addEventListener('input', this.filtr.bind(this));
+        this.input.addEventListener('keypress', (e) => {
+            const key = e.keyCode;
+            if (key === 13) {
+                this.startDraw();
+            }
+        })
+
 
 
 
@@ -20,7 +27,10 @@ class Start {
         } else {
             const li = this.list.addTask(this.input.value);
             //ustawienie nasłuchiwania na przycisk z X
-            li.querySelector('button').addEventListener('click', this.deleteTask.bind(this));
+
+            li.querySelector('i').addEventListener('click', this.deleteTask.bind(this));
+            li.addEventListener('click', this.throwTask);
+
             //czyszczenie inputa
             this.input.value = '';
 
@@ -32,6 +42,9 @@ class Start {
         const index = e.target.parentNode.dataset.key;
         const i = this.list.removeTask(index);
         this.render();
+    }
+    throwTask(e) {
+        e.target.classList.toggle('line-trough');
     }
 
     filtr(e) {

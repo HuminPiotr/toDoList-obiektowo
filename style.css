@@ -1,5 +1,5 @@
 body {
-    /* background-image: url('img/background.jpg'); */
+    background-image: url('img/wood_1.png');
 
 }
 
@@ -9,6 +9,7 @@ main {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    font-family: 'Mina', sans-serif;
 }
 
 section {
@@ -16,22 +17,35 @@ section {
     min-height: 80vh;
     background-color: rgb(255, 243, 202);
     box-shadow: 6px 6px 10px;
-    font-size: 4vh;
-    font-family: Verdana;
+    font-size: 3vh;
     padding: 50px;
 }
 
 section ul {
     margin-bottom: 0;
+    word-wrap: break-word;
+}
+
+section ul li {
+    /* border-bottom: inset 1px black; */
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+section ul li:hover {
+    list-style-image: url('img/checked2.png');
+
 }
 
 section input {
-    font-size: 4vh;
+    font-size: 3vh;
     background-color: transparent;
     border: 0;
     border-bottom: 2px inset rgb(194, 191, 191);
-    margin-left: 1vh;
+    margin-left: 40px;
     box-shadow: 0;
+    font-family: 'Mina', sans-serif;
+    flex-grow: 1;
 }
 
 section input:focus {
@@ -41,23 +55,69 @@ section input:focus {
 }
 
 input+button {
-    font-size: 36px;
+    font-size: 26px;
     background-color: transparent;
     border: 0;
     cursor: pointer;
-    color: rgb(133, 130, 130);
+    color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-}
-
-ul {
-    word-wrap: break-word;
+    font-weight: bolder;
+    transition: 0.2s;
 }
 
 input+button:hover {
-    color: black;
+    color: #00F51B;
+
 }
 
 input+button:focus {
     outline: 0;
+}
+
+.add {
+    display: flex;
+}
+
+i {
+    cursor: pointer;
+}
+
+i.icon-cancel {
+    color: red;
+    font-size: 2vh;
+    float: right;
+    margin: auto;
+}
+
+.line-trough {
+    text-decoration: line-through;
+    list-style-image: url('img/checked2.png');
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
+
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(70, 70, 143);
+    color: white;
+    line-height: 70px;
+    height: 70px;
+
+    box-sizing: border-box;
+    flex-grow: 1;
+    box-shadow: 6px 6px 10px black;
+    border-top: white dotted 1px;
+    border-bottom: white dotted 1px;
+
+}
+
+h2 {
+    margin: 0;
 }

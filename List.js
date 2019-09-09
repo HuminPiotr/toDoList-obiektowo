@@ -9,7 +9,7 @@ class List {
         this.addTask = (content) => {
             const li = document.createElement('li');
             li.classList = 'task';
-            li.innerHTML = `${content} <button> X </button>`;
+            li.innerHTML = `${content} <i class='icon-cancel'></i>`;
             _tasks.push(li);
             return li;
         }
